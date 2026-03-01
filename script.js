@@ -69,11 +69,6 @@ function playSound(id) {
 }
 
 // ✅ Click sound on every button with small delay to avoid lag
-document.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
-    setTimeout(() => playSound("clickSound"), 30);
-  }
-});
   
 const startBtn = document.getElementById("startBtn");
 const adminBtn = document.getElementById("adminLoginBtn");
