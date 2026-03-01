@@ -70,11 +70,11 @@ function playSound(id) {
 
 // ✅ Click sound on every button with small delay to avoid lag
 document.addEventListener("click", (e) => {
-  if (e.target.closest("button")) {
+  const tag = e.target.tagName;
+  if (e.target.closest("button") && tag !== "DIV" && tag !== "BODY") {
     setTimeout(() => playSound("clickSound"), 30);
   }
 });
-
 const startBtn = document.getElementById("startBtn");
 const adminBtn = document.getElementById("adminLoginBtn");
 
@@ -204,7 +204,11 @@ if (filledPages.includes(i)) {
   page.innerText = pageLabel; // ✅ only set once, with correct label
 
   page.addEventListener("click", () => {
-  if (wrongSound) { wrongSound.currentTime = 0; wrongSound.play().catch(() => {}); }
+  if (wrongSound) {
+  wrongSound.pause();
+  wrongSound.currentTime = 0;
+  wrongSound.play().catch(() => {});
+}
   pageMessage.innerText = "This page is already filled and locked.";
   setTimeout(() => {
     page.classList.add("shake");
