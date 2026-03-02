@@ -452,6 +452,8 @@ function saveToFirebase(photoBase64 = null) {
 }).catch((error) => {
   console.error("Firebase error:", error);
 });
+
+}
 /* ---------------- CONFETTI ---------------- */
 
 function launchConfetti(selectedColor) {
