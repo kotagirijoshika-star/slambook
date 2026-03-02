@@ -772,4 +772,3 @@ document.getElementById("viewOnlyBackBtn").addEventListener("click", () => {
 });
 // Pre-buffer all sounds so they're ready instantly
 });
-}
