@@ -455,6 +455,7 @@ function saveToFirebase(photoBase64 = null) {
 });
 
 }
+});
 /* ---------------- CONFETTI ---------------- */
 
 function launchConfetti(selectedColor) {
