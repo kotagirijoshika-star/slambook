@@ -158,6 +158,7 @@ const questions = [
 /* ---------------- START BUTTON ---------------- */
 
 startBtn.addEventListener("click", () => {
+  playSound("clickSound");
   generatePages();
   switchScreen(welcomeContainer, pagesContainer);
   // hide entire welcome wrapper including admin button
@@ -166,6 +167,7 @@ startBtn.addEventListener("click", () => {
 });
 
 backBtn.addEventListener("click", () => {
+  playSound("clickSound");
   pageMessage.innerText = "";
   switchScreen(pagesContainer, welcomeContainer);
   // show welcome wrapper again
@@ -173,6 +175,7 @@ backBtn.addEventListener("click", () => {
 });
 
 formBackBtn.addEventListener("click", () => {
+  playSound("clickSound");
 pageMessage.innerText = "";
 switchScreen(formContainer, pagesContainer);
 });
