@@ -5,6 +5,7 @@ let filledPages;
 let allAnswers;
 let allPageColors;
 let allAnswersBackup;
+let allPagePhotos;
 
 adminLoginPanel = document.getElementById("adminLoginPanel");
 adminDashboard = document.getElementById("adminDashboard");
@@ -448,7 +449,9 @@ function saveToFirebase(photoBase64 = null) {
   launchConfetti(color);
   generatePages();
 
-})
+}).catch((error) => {
+  console.error("Firebase error:", error);
+});
 /* ---------------- CONFETTI ---------------- */
 
 function launchConfetti(selectedColor) {
