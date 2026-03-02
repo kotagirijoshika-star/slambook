@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("SCRIPT STARTED");
 let adminLoginPanel;
 let adminDashboard;
 let filledPages;
